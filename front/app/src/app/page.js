@@ -4,7 +4,9 @@ import Styles from "./page.module.css";
 import axios from "axios";
 
 function handleClick() {
-  console.log("increment like count")
+  axios.get('http://localhost:3000/api/v1/posts').then(response => {
+  console.log(response.data);
+  });
  }
 
 export default function Home() {
