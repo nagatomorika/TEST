@@ -5,7 +5,7 @@ module Api
 
       def index
         posts = Post.order(created_at: :desc)
-        render json: { status: 'SUCCESS', message: 'Loaded posts', data: posts }
+        render json: { status: '200',  data: posts.find(1).title }
       end
 
       def show
